@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Circus Management</title>
+    <meta name="description" content="A description of your website">
+    <meta name="keywords" content="keyword1, keyword2, keyword3">
+
+    <style>
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .navbar {
+          overflow: hidden;
+          background-color: #333;
+        }
+        
+        .navbar a {
+          float: left;
+          font-size: 16px;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        
+        .dropdown {
+          float: left;
+          overflow: hidden;
+        }
+        
+        .dropdown .dropbtn {
+          font-size: 16px;  
+          border: none;
+          outline: none;
+          color: white;
+          padding: 14px 16px;
+          background-color: inherit;
+          font-family: inherit;
+          margin: 0;
+        }
+        
+        .navbar a:hover, .dropdown:hover .dropbtn {
+          background-color: red;
+        }
+        
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        
+        .dropdown-content a {
+          float: none;
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+        }
+        
+        .dropdown-content a:hover {
+          background-color: #ddd;
+        }
+        
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+    </style>
+</head>  
+
+<body>
+    <div class="navbar">
+        <a href="/home">Home</a>
+        <div class="dropdown">
+          <button class="dropbtn">Pages
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="/staff_directory">Staff Directory</a>
+            <a href="/employee_add">Employee Management</a>
+            <a href="/animals">Animals</a>
+            <a href="/equipment">Equipment</a>
+            <a href="/acts">Acts</a>
+          </div>
+        </div> 
+      </div>
+
+    <div id="wrapper">
+
+        <div id="header">
+
+            <div class="top_banner">
+                <h1>Circus Management</h1>
+            </div>
+
+        </div>
+
+        <div id="page_content">
+
+            <div class="right_section">
+                <div class="common_content">
+                    <h2>Acts</h2>
+                    <hr>
+                    <form accept-charset="UTF-8" action="/acts" autocomplete="off" method="POST"
+                        target="_blank">
+                        <fieldset>
+                            <legend>Act Lookup:</legend> 
+                                <label for="act_number">Act Number : </label> <input name="act_number"type="number" value="" /> <br />
+                                <label for="email">Email : </label><input name="email" type="text" value="" /> <br />
+                                <label for="animal_id">Animal ID : </label><input name="animal_id" type="number" value="" /> <br />
+                                <label for="equipment_id">Equipment ID : </label><input name="equipment_id" type="number" value="" /> <br />
+                                <input type="submit" value="Find" onclick="loading();">
+                        </fieldset>
+                    </form>
+                    <form accept-charset="UTF-8" action="/add_act" autocomplete="off" method="POST"
+                    target="_blank">
+                    <fieldset>
+                        <legend>Edit/Add Act:</legend> 
+                        <label for="act_number">Act Number<sup>*</sup> : </label> <input name="act_number"type="number" value="" /> <br />
+                        <label for="email_1">Email 1<sup>*</sup> : </label><input name="email_1" type="text" value="" /> <br />
+                        <label for="email_2">Email 2 : </label><input name="email_2" type="text" value="" /> <br />
+                        <label for="email_3">Email 3 : </label><input name="email_3" type="text" value="" /> <br />
+                        <label for="email_4">Email 4 : </label><input name="email_4" type="text" value="" /> <br />
+                        <label for="email_5">Email 5 : </label><input name="email_5" type="text" value="" /> <br />
+                        <label for="animal_1">Animal ID 1 : </label><input name="animal_1" type="number" value="" /> <br />
+                        <label for="animal_2">Animal ID 2 : </label><input name="animal_2" type="number" value="" /> <br />
+                        <label for="animal_3">Animal ID 3 : </label><input name="animal_3" type="number" value="" /> <br />
+                        <label for="equipment_1">Equipment ID 1 : </label><input name="equipment_1" type="number" value="" /> <br />
+                        <label for="equipment_2">Equipment ID 2 : </label><input name="equipment_2" type="number" value="" /> <br />
+                        <p><sup>*</sup> indicates required fields</p>  
+                        <input type="submit" value="Edit/Add" onclick="loading();">
+                    </fieldset>
+                </form>
+                    <br /> 
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</body>
+
+</html>

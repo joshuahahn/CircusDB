@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Circus Management</title>
+    <meta name="description" content="A description of your website">
+    <meta name="keywords" content="keyword1, keyword2, keyword3">
+
+    <style>
+
+        body {
+
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .navbar {
+          overflow: auto;
+          background-color: #333;
+        }
+        
+        .navbar a {
+          float: left;
+          font-size: 18px;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        
+        .dropdown {
+          float: left;
+          overflow: hidden;
+        }
+        
+        .dropdown .dropbtn {
+          font-size: 16px;  
+          border: none;
+          outline: none;
+          color: white;
+          padding: 14px 16px;
+          background-color: inherit;
+          font-family: inherit;
+          margin: 0;
+        }
+        
+        .navbar a:hover, .dropdown:hover .dropbtn {
+          background-color: red;
+        }
+        
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: white;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        
+        .dropdown-content a {
+          float: none;
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+        }
+        
+        .dropdown-content a:hover {
+          background-color: white;
+        }
+        
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+        
+        
+        
+        
+    
+        nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #3E3F43;
+        display: table;
+        width: 100%;
+        }
+
+        
+        </style>
+
+
+</head>  
+
+<Body>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <div class="navbar">
+      <a class="active" href="/home"><i class="fa fa-fw fa-home"></i></a>
+        <div class="dropdown">
+          <button class="dropbtn">Pages
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="/staff_directory">Staff Directory</a>
+            <a href="/employee_add">Employee Management</a>
+            <a href="/animals">Animals</a>
+            <a href="/equipment">Equipment</a>
+            <a href="/acts">Acts</a>
+          </div>
+        </div> 
+      </div>
+</Body>
+
+<p>Please enter a valid query</p>

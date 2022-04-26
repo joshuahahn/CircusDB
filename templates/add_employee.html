@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Circus Management</title>
+    <meta name="description" content="A description of your website">
+    <meta name="keywords" content="keyword1, keyword2, keyword3">
+
+    <style>
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .navbar {
+          overflow: hidden;
+          background-color: #333;
+        }
+        
+        .navbar a {
+          float: left;
+          font-size: 16px;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        
+        .dropdown {
+          float: left;
+          overflow: hidden;
+        }
+        
+        .dropdown .dropbtn {
+          font-size: 16px;  
+          border: none;
+          outline: none;
+          color: white;
+          padding: 14px 16px;
+          background-color: inherit;
+          font-family: inherit;
+          margin: 0;
+        }
+        
+        .navbar a:hover, .dropdown:hover .dropbtn {
+          background-color: red;
+        }
+        
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        
+        .dropdown-content a {
+          float: none;
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+        }
+        
+        .dropdown-content a:hover {
+          background-color: #ddd;
+        }
+        
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+    </style>
+</head>  
+
+<body>
+    <div class="navbar">
+        <a href="/home">Home</a>
+        <div class="dropdown">
+          <button class="dropbtn">Pages
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="/staff_directory">Staff Directory</a>
+            <a href="/employee_add">Employee Management</a>
+            <a href="/animals">Animals</a>
+            <a href="/equipment">Equipment</a>
+            <a href="/acts">Acts</a>
+          </div>
+        </div> 
+      </div>
+
+    <div id="wrapper">
+
+        <div id="header">
+            <div class="top_banner">
+                <h1>Circus Management</h1>
+            </div>
+        </div>
+
+        <div id="page_content">
+
+            <div class="right_section">
+                <div class="common_content">
+                    <h2>Employee Management</h2>
+                    <hr>
+                    <form accept-charset="UTF-8" action="/add_employee" autocomplete="off" method="POST"
+                    target="_blank">
+                    <fieldset>
+                        <legend>Edit/Add Employee:</legend> 
+                        <label for="email">Email<sup>*</sup> : </label><input name="email" type="email" value="" /> <br />
+                        <label for="first_name">First Name<sup>*</sup> : </label> <input name="first_name"type="text" value="" /> <br />
+                        <label for="last_name">Last Name : </label> <input name="last_name" type="text" value="" /> <br />
+                        <label for="dob">Date of Birth : </label><input name="dob" type="date" value="" /> <br />
+                        <label for="city">City : </label> <input name="city" type="text" value="" /> <br />
+                        <label for="state">State : </label> <input name="state" type="text" value="" /> <br />
+                        <label for="hire_date">Hire Date<sup>*</sup> : </label><input name="hire_date" type="date" value="" /> <br />
+                        <label for="salary">Salary : </label> <input name="salary" type="number" value="" /> <br />     
+                        <p><sup>*</sup> indicates required fields</p>  
+                        <input type="submit" value="Edit/Add" onclick="loading();">
+                    </fieldset>
+                </form>
+                <form accept-charset="UTF-8" action="/add_performer" autocomplete="off" method="POST"
+                    target="_blank">
+                    <fieldset>
+                        <legend>Edit/Add Performer:</legend> 
+                        <label for="email">Email<sup>*</sup> : </label><input name="email" type="email" value="" /> <br />
+                        <label for="first_name">First Name<sup>*</sup> : </label> <input name="first_name"type="text" value="" /> <br />
+                        <label for="last_name">Last Name : </label> <input name="last_name" type="text" value="" /> <br />
+                        <label for="dob">Date of Birth : </label><input name="dob" type="date" value="" /> <br />
+                        <label for="city">City : </label> <input name="city" type="text" value="" /> <br />
+                        <label for="state">State : </label> <input name="state" type="text" value="" /> <br />
+                        <label for="hire_date">Hire Date<sup>*</sup> : </label><input name="hire_date" type="date" value="" /> <br />
+                        <label for="salary">Salary : </label> <input name="salary" type="number" value="" /> <br /> 
+                        <label for="specialty">Specialty: </label> <input name="specialty" type="text" value="" /> <br /> 
+                        <label for="weight">Weight (lb): </label> <input name="weight" type="number" value="" /> <br /> 
+                        <label for="height">Height (in): </label> <input name="height" type="number" value="" /> <br />    
+                        <p><sup>*</sup> indicates required fields</p>  
+                        <input type="submit" value="Edit/Add" onclick="loading();">
+                    </fieldset>
+                </form>
+                <form accept-charset="UTF-8" action="/add_animal_trainer" autocomplete="off" method="POST"
+                target="_blank">
+                <fieldset>
+                    <legend>Edit/Add Animal Trainer:</legend> 
+                    <label for="email">Email<sup>*</sup> : </label><input name="email" type="email" value="" /> <br />
+                    <label for="first_name">First Name<sup>*</sup> : </label> <input name="first_name"type="text" value="" /> <br />
+                    <label for="last_name">Last Name : </label> <input name="last_name" type="text" value="" /> <br />
+                    <label for="dob">Date of Birth : </label><input name="dob" type="date" value="" /> <br />
+                    <label for="city">City : </label> <input name="city" type="text" value="" /> <br />
+                    <label for="state">State : </label> <input name="state" type="text" value="" /> <br />
+                    <label for="hire_date">Hire Date<sup>*</sup> : </label><input name="hire_date" type="date" value="" /> <br />
+                    <label for="salary">Salary : </label> <input name="salary" type="number" value="" /> <br />  
+                    <label for="specialty">Specialty: </label> <input name="specialty" type="text" value="" /> <br /> 
+                    <label for="weight">Weight (lb): </label> <input name="weight" type="number" value="" /> <br /> 
+                    <label for="height">Height (in): </label> <input name="height" type="number" value="" /> <br />   
+                    <label for="animal_specialty">Animal Specialty: </label> <input name="animal_specialty" type="text" value="" /> <br /> 
+                    <label for="training_certification">Has Training Certification? : </label> <input name="training_certification" type="checkbox" value="TRUE" /> <br /> 
+                    <label for="max_animals">Max Number of Animals : </label> <input name="max_animals" type="number" value="" /> <br />      
+                    <p><sup>*</sup> indicates required fields</p>  
+                    <input type="submit" value="Edit/Add" onclick="loading();">
+                </fieldset>
+            </form>
+            <form accept-charset="UTF-8" action="/add_choreographer" autocomplete="off" method="POST"
+                target="_blank">
+                <fieldset>
+                    <legend>Edit/Add Choreographer:</legend> 
+                    <label for="email">Email<sup>*</sup> : </label><input name="email" type="email" value="" /> <br />
+                    <label for="first_name">First Name<sup>*</sup> : </label> <input name="first_name"type="text" value="" /> <br />
+                    <label for="last_name">Last Name : </label> <input name="last_name" type="text" value="" /> <br />
+                    <label for="dob">Date of Birth<sup>*</sup> : </label><input name="dob" type="date" value="" /> <br />
+                    <label for="city">City : </label> <input name="city" type="text" value="" /> <br />
+                    <label for="state">State : </label> <input name="state" type="text" value="" /> <br />
+                    <label for="hire_date">Hire Date<sup>*</sup> : </label><input name="hire_date" type="date" value="" /> <br />
+                    <label for="salary">Salary : </label> <input name="salary" type="number" value="" /> <br />  
+                    <label for="performace_expertise">Performance Expertise : </label> <input name="performance_expertise" type="text" value="" /> <br />  
+                    <label for="number_of_performances">Number of Performances : </label> <input name="number_of_performances" type="number" value="" /> <br />  
+                    <label for="years_in_industry">Years in Industry : </label> <input name="years_in_industry" type="number" value="" /> <br />    
+                    <p><sup>*</sup> indicates required fields</p>  
+                    <input type="submit" value="Edit/Add" onclick="loading();">
+                </fieldset>
+            </form>
+                    <br />
+                    
+          </div>
+    </div>
+<div class="clear">
+</div>

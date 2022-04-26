@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Circus Management</title>
+    <meta name="description" content="A description of your website">
+    <meta name="keywords" content="keyword1, keyword2, keyword3">
+    <!--link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" type="text/css"-->
+
+    <style>
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .navbar {
+          overflow: hidden;
+          background-color: #333;
+        }
+        
+        .navbar a {
+          float: left;
+          font-size: 16px;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        
+        .dropdown {
+          float: left;
+          overflow: hidden;
+        }
+        
+        .dropdown .dropbtn {
+          font-size: 16px;  
+          border: none;
+          outline: none;
+          color: white;
+          padding: 14px 16px;
+          background-color: inherit;
+          font-family: inherit;
+          margin: 0;
+        }
+        
+        .navbar a:hover, .dropdown:hover .dropbtn {
+          background-color: red;
+        }
+        
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        
+        .dropdown-content a {
+          float: none;
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+        }
+        
+        .dropdown-content a:hover {
+          background-color: #ddd;
+        }
+        
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+        </style>
+
+
+</head>  
+
+<body>
+
+    <div class="navbar">
+        <a href="/home">Home</a>
+        <div class="dropdown">
+          <button class="dropbtn">Pages
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="/staff_directory">Staff Directory</a>
+            <a href="/employee_add">Employee Management</a>
+            <a href="/animals">Animals</a>
+            <a href="/equipment">Equipment</a>
+            <a href="/acts">Acts</a>
+          </div>
+        </div> 
+      </div>
+
+    <div id="wrapper">
+
+        <div id="header">
+
+            <div class="top_banner">
+                <h1>Circus Management</h1>
+            </div>
+
+        </div>
+
+        <div id="page_content">
+
+            <div class="right_section">
+                <div class="common_content">
+                    <h2>Animals</h2>
+                    <hr>
+                    <form accept-charset="UTF-8" action="/animal_lookup" autocomplete="off" method="POST"
+                        target="_blank">
+                        <fieldset>
+                            <legend>Animal Lookup:</legend> 
+                                <label for="animal_id">Animal ID : </label> <input name="id"type="text" value="" /> <br />
+                                <label for="email">Email : </label><input name="email" type="email" value="" /> <br />
+                                <label for="name">Animal Name : </label><input name="name" type="text" value="" /> <br />
+                                <label for="species">Species : </label><input name="species" type="text" value="" /> <br />
+                                <label for="sort">Sort by Years in Circus </label><input type="checkbox" name="sort_by_years" /> <br />
+                                <input type="submit" value="Find" onclick="loading();">
+                        </fieldset>
+                    </form>
+                    <form accept-charset="UTF-8" action="/add_animal" autocomplete="off" method="POST"
+                    target="_blank">
+                    <fieldset>
+                        <legend>Edit/Add Animals:</legend> 
+                        <label for="animal_id">Animal ID<sup>*</sup> : </label> <input name="id"type="text" value="" /> <br />
+                        <label for="email">Email<sup>*</sup> : </label><input name="email" type="email" value="" /> <br />
+                        <label for="name">Animal Name<sup>*</sup> : </label><input name="name" type="text" value="" /> <br />
+                        <label for="species">Species : </label><input name="species" type="text" value="" /> <br />
+                        <label for="dob">Date of Birth<sup>*</sup> : </label><input name="dob" type="date" value="" /> <br />
+                        <label for="years_in_circus">Years in Circus : </label><input name="years_in_circus" type="number" value="" /> <br />
+                        <p><sup>*</sup> indicates required fields</p>  
+                        <input type="submit" value="Edit/Add" onclick="loading();">
+                    </fieldset>
+                </form>
+                    <br />
+                    
+                </div>
+            </div>
+
+            <div class="clear"></div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

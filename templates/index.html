@@ -1,0 +1,34 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"COMSW4111 Project 1 Joshua Hahn jyh2134 Kayla Poulsen kap2229</title>
+    <style>
+      body{ 
+        font-size: 15pt;
+        font-family: arial;
+      }
+    </style>
+  </head>
+
+
+  <body>
+    <h1>Some famous Computer Scientists</h1>
+    <div>{{data}}</div>
+
+    <div>
+      {% for n in data %}
+      <div>{{n}}</div>
+      {% endfor %}
+    </div>
+
+    <p><a href="another">Go to the other page</a></p>
+
+    <form method="POST" action="/add">
+    <p>Name of new computer scientist: <input type="text" name="name" placeholder="text"> <input type="submit" value="Add"></p>
+    </form>
+
+  </body>
+
+
+</html>
