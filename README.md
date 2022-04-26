@@ -1,8 +1,8 @@
 # Circus DB
 
-This project is a fullstack implementation of a database (PostgreSQL hosted on Google cloud) with frontend written in HTML and Python (Flask and SQLAlchemy).
-Server & Applications written by myself (Joshua Hahn)
-HTML templates written by Kayla Poulsen
+This project is a fullstack implementation of a database (PostgreSQL hosted on Google cloud) with frontend written in HTML and Python (Flask and SQLAlchemy). <br>
+Server & Applications written by myself (Joshua Hahn) <br>
+HTML templates written by Kayla Poulsen <br>
 Completed for COMS W4111 Introduction to Databases in Columbia University
 
 ---
